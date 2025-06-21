@@ -18,6 +18,8 @@ services:
 
   server:
     container_name: server
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     build:
       context: server
       dockerfile: Dockerfile
