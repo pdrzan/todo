@@ -1,7 +1,7 @@
 <div *ngIf="task" class="task">
   <div>{{ task.message }}</div>
   <div class="task-actions">
-    <input type="checkbox" [(ngModel)]="task.completed" (change)="onCompleteChange(task)"/>
-    <button class="task-remove" (click)="removeTask()">X</button>
+    <input type="checkbox" [(ngModel)]="task.completed" (change)="onCompleteChange(task)" title="Complete the task"/>
+    <button class="task-remove" (click)="removeTask()" title="Delete the task">X</button>
   </div>
 </div>
