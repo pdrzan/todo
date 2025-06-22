@@ -29,3 +29,13 @@ services:
     depends_on:
       database:
         condition: service_healthy
+
+  client:
+    container_name: client
+    build:
+      context: client
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+    depends_on: 
+      - server
