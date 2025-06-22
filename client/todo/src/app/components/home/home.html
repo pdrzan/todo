@@ -5,4 +5,9 @@
   <div class="home-description">
     You can see here what tasks do you have.
   </div>
+  <div class=tasks>
+    @for (task of tasks; track task.id) {
+    <task-component [task]="task"/>
+    }
+  </div>
 </div>
