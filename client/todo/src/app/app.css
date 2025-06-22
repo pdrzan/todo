@@ -1,5 +1,5 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  background-color: red;
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
