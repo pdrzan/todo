@@ -10,9 +10,9 @@ from server.modules import task
 
 def create_app():
     app = Flask(__name__)
+    CORS(app, origins=["http://localhost:4200"])
 
     app.config.from_object(Config)
-    CORS(app, origins=['http://localhost:3000'])
 
     database.init_app(app)
     from server.models.task import Task
