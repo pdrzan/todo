@@ -15,4 +15,16 @@ export class TodoService {
   public getAllTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(this.basePath);
   }
+
+  public updateTask(task: Task): Observable<Task> {
+    return this.http.put<Task>(this.basePath + `/${task.id}`, task);
+  }
+
+  public getTask(task_id: number): Observable<Task> {
+    return this.http.get<Task>(this.basePath + `/${task_id}`);
+  }
+
+  public deleteTask(task_id: number): Observable<Task> {
+    return this.http.delete<Task>(this.basePath + `/${task_id}`);
+  }
 }
