@@ -5,9 +5,16 @@
   <div class="home-description">
     You can see here what tasks do you have.
   </div>
-  <div class=tasks>
-    @for (task of tasks; track task.id) {
-    <task-component [task]="task"/>
+  <div class="new-task">
+    <label for="new-task">Type a new task to add (Tip: press <strong>Enter</strong>!)</label>
+    <div class="new-task-inputs">
+      <input (keyup)="onEnter($event)" id="new-task" placeholder="Your new task" type="text" [(ngModel)]="new_task_message" class="new-task-input"/>
+      <button class="button" (click)="onAddTaskButtonClick()">+ Add task</button>
+    </div>
+  </div>
+  <div class="tasks">
+    @for (task of tasks; track task) {
+      <task-component [task]="task"/>
     }
   </div>
 </div>

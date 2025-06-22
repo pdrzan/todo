@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, inject, Signal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Task } from '../../models/task'
@@ -20,9 +20,5 @@ export class TaskComponent {
     this.todoService.updateTask(task).subscribe(task => {
       this.task = task;
     });
-  }
-
-  constructor() {
-    console.log(this.task);
   }
 }

@@ -13,6 +13,42 @@
   gap: 10px;
 }
 
+.new-task {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.new-task-inputs {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.new-task-input {
+  padding: 10px 20px;
+  flex-grow: 1;
+}
+
+.button {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--primary-grey);
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+}
+
 .tasks {
   box-sizing: border-box;
   display: flex;

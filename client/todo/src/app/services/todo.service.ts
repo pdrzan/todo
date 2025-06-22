@@ -20,6 +20,10 @@ export class TodoService {
     return this.http.put<Task>(this.basePath + `/${task.id}`, task);
   }
 
+  public addTask(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.basePath, task);
+  }
+
   public getTask(task_id: number): Observable<Task> {
     return this.http.get<Task>(this.basePath + `/${task_id}`);
   }

@@ -9,5 +9,4 @@ import { NavBar } from './components/navbar/nav-bar';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'todo';
 }
