@@ -1,0 +1,11 @@
+:host {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.home {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 20px;
+}
