@@ -5,6 +5,9 @@
   --primary-white: #F9F9F9;
   --primary-grey: #AAAAAA;
   --primary-blue: #273BE3;
+  --primary-red: #CC0000;
+
+  --secondary-red: #AA0000;
 }
 
 * {

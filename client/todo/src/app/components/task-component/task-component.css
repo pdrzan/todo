@@ -9,3 +9,21 @@
   justify-content: space-between;
   font-size: 1.2em;
 }
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-remove {
+  padding: 3px 6px;
+  border: 1px solid var(--primary-grey);
+  font-size: 1em;
+  border-radius: 5px;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+}
+
+.task-remove:hover {
+  background-color: var(--secondary-red);
+}

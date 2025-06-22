@@ -27,7 +27,6 @@ export class Home implements OnInit{
 
     this.todoService.addTask(new Task(null, this.new_task_message, false))
       .subscribe(task => {
-        console.log(task);
         this.new_task_message = "";
         this.getTasks();
       });
@@ -38,6 +37,15 @@ export class Home implements OnInit{
     if(event.key === 'Enter') {
       this.onAddTaskButtonClick();
     }
+  }
+
+  onTaskRemove(task: Task) {
+    if (!task.id) return;
+
+    this.todoService.deleteTask(task.id)
+      .subscribe(task => {
+        this.getTasks();
+    });
   }
 
   getTasks() {
