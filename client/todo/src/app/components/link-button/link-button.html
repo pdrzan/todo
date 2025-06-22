@@ -1,0 +1,6 @@
+<a [href]="href" class="link-button" target="_blank">
+  <svg *ngIf="icon_path" xmlns="http://www.w3.org/2000/svg" class="link-button-icon">
+    <use [attr.xlink:href]="icon_path"></use>
+  </svg>
+  {{ title }}
+</a>

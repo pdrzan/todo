@@ -1,0 +1,29 @@
+.nav-bar {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-bar-background);
+  box-shadow: 0 0 0 1px var(--primary-grey);
+}
+
+.nav-bar-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image img {
+  height: 50px;
+}

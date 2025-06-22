@@ -1,0 +1,25 @@
+.link-button {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--primary-grey);
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-button:hover {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+}
+
+.link-button:hover use {
+  color: var(--primary-white);
+}
+
+.link-button-icon {
+  width: 25px;
+  height: 25px;
+}
+
