@@ -6,9 +6,6 @@ from flask import Blueprint, jsonify, request
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, insert, delete
 
-def is_query_param_value_true(query_param_value):
-  return query_param_value.lower() == 'true'
-
 blueprint = Blueprint('task', __name__, url_prefix='/task')
 
 @blueprint.route("/", methods=["GET"])
@@ -73,7 +70,7 @@ def add_task():
         return {"message": "The body has to contain a 'message' and 'completed' to create a task!"}, 400
 
     message = request.json['message']
-    completed = is_query_param_value_true(request.json['completed'])
+    completed = request.json['completed']
 
     with Session(database.engine) as session:
         task = Task(message=message, completed=completed)
@@ -161,7 +158,7 @@ def update_task(task_id):
         return {"message": "The body has to contain a 'message' and 'completed' to update a task!"}, 400
 
     message = request.json['message']
-    completed = is_query_param_value_true(request.json['completed'])
+    completed = request.json['completed']
 
     with Session(database.engine) as session:
         task = session.get(Task, task_id)
@@ -173,7 +170,7 @@ def update_task(task_id):
         task.completed = completed
 
         session.commit()
-        return jsonify({"message": f"Task with id {task_id} updated!"})
+        return jsonify(task.to_dict())
 
 @blueprint.route('/<int:task_id>', methods=["DELETE"])
 def delete_task(task_id):
