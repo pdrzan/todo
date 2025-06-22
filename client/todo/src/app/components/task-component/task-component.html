@@ -1,5 +1,5 @@
 <div *ngIf="task" class="task">
-  <div>{{ task.message }}</div>
+  <div [ngClass]="task.completed ? 'completed' : ''">{{ task.message }}</div>
   <div class="task-actions">
     <input type="checkbox" [(ngModel)]="task.completed" (change)="onCompleteChange(task)" title="Complete the task"/>
     <button class="task-remove" (click)="removeTask()" title="Delete the task">X</button>

@@ -27,3 +27,7 @@
 .task-remove:hover {
   background-color: var(--secondary-red);
 }
+
+.completed {
+  text-decoration: line-through;
+}
