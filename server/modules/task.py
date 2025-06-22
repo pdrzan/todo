@@ -8,7 +8,7 @@ from sqlalchemy import select, update, insert, delete
 
 blueprint = Blueprint('task', __name__, url_prefix='/task')
 
-@blueprint.route("/", methods=["GET"])
+@blueprint.route("", methods=["GET"])
 def get_all():
     """
     Returns all the tasks in the database
@@ -34,7 +34,7 @@ def get_all():
         tasks = session.scalars(select(Task).order_by(Task.id)).all()
         return jsonify([task.to_dict() for task in tasks]) 
 
-@blueprint.route("/", methods=["POST"])
+@blueprint.route("", methods=["POST"])
 def add_task():
     """
     Creates a task in the database
