@@ -2,7 +2,7 @@ services:
   database:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: pdrzan
     container_name: database
     restart: always
     ports:
